@@ -7,7 +7,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
     const askAge = () => {
         const msg = createChatBotMessage("Enter Your Age :",{
-            widget: 'ageList'
+            widget: 'ageList',
+            delay: 500
         })
 
         setState((prev) => ({
@@ -18,7 +19,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
 
     const askName = () => {
-        const msg = createChatBotMessage("Enter Your Name :")
+        const msg = createChatBotMessage("Enter Your Name :",{
+            delay: 500
+        })
 
         setState((prev) => ({
             ...prev,
@@ -27,7 +30,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
 
     const end = () => {
-        const msg = createChatBotMessage("Thank You !")
+        const msg = createChatBotMessage("Thank You !",{
+            delay: 500
+        })
         const msg1 = createChatBotMessage("Thank you. In 5 seconds, bot will exit",{
             withAvatar: false,
             delay: 800
