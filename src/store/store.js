@@ -5,7 +5,10 @@ const userSlice = createSlice({
     name: "user",
     initialState: {
         stage: 1,
-        user: null
+        user: {
+            name: "none",
+            age: -1
+        }
     },
     reducers: {
         next: (state) => {
@@ -13,11 +16,17 @@ const userSlice = createSlice({
         },
         reset: (state) => {
             state.stage = 1;
-            state.user = null;
+            state.user = {
+                name: "none",
+                age: -1
+            };
         },
-        setUser: (state,action) => {
-            state.user = action.payload;
-        }
+        setName: (state,action) => {
+            state.user.name = action.payload
+        },
+        setAge: (state,action) => {
+            state.user.age = action.payload
+        },
     }
 })
 

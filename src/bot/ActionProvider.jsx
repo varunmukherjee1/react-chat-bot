@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
+
+    const navigate = useNavigate();
 
     const askAge = () => {
         const msg = createChatBotMessage("Enter Your Age :",{
@@ -25,11 +28,34 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
     const end = () => {
         const msg = createChatBotMessage("Thank You !")
+        const msg1 = createChatBotMessage("Thank you. In 5 seconds, bot will exit",{
+            withAvatar: false,
+            delay: 800
+        })
 
         setState((prev) => ({
             ...prev,
-            messages: [...prev.messages,msg]
+            messages: [...prev.messages,msg,msg1]
         }))
+
+        let count = 0;
+        const interval = setInterval(() => {
+            count++;
+
+            const temp = createChatBotMessage(`${5-count}...`,{
+                withAvatar: false,
+            }) 
+
+            setState((prev) => ({
+                ...prev,
+                messages: [...prev.messages,temp]
+            }))
+
+            if (count === 5) {
+                clearInterval(interval);
+                navigate("/p2")
+            }
+        }, 1000);
     }    
 
     return (

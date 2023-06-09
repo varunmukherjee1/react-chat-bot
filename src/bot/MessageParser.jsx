@@ -1,8 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+
+import { userActions } from '../store/store';
 
 const MessageParser = ({ children, actions }) => {
+
+    const dispatch = useDispatch();
+
   const parse = (message) => {
-    console.log(message);
+    dispatch(userActions.setName(message));
+    actions.askAge();
   };
 
   return (

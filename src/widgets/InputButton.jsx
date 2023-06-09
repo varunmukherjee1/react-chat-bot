@@ -10,6 +10,8 @@ const InputButton = (props) => {
             ...prev,
             messages: [...prev.messages,msg]
         }))
+
+        props.actionProvider.askName();
     }
 
     return (
