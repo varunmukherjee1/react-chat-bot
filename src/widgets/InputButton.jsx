@@ -1,6 +1,8 @@
 import React from 'react'
 import { createClientMessage } from 'react-chatbot-kit';
 
+import classes from "./widgets.module.css"
+
 const InputButton = (props) => {
 
     const clickHandler = () => {
@@ -15,7 +17,7 @@ const InputButton = (props) => {
     }
 
     return (
-        <div>
+        <div className = {classes.buttonDiv}>
             <button onClick = {clickHandler}>Got It!</button>
         </div>
     )

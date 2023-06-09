@@ -4,6 +4,7 @@ import InputButton from '../widgets/InputButton';
 import Dropdown from '../widgets/Dropdown';
 
 const config = {
+    botName: '🤖',
     initialMessages: [
         createChatBotMessage(`Hello, Welcome to student info system!`,
         {

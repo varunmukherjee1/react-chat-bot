@@ -6,9 +6,11 @@ import config from '../../bot/config';
 import ActionProvider from '../../bot/ActionProvider';
 import MessageParser from '../../bot/MessageParser';
 
+import classes from "./page2.module.css"
+
 const Page2 = () => {
   return (
-    <div>
+    <div className = {classes.div}>
       <Chatbot
         config={config}
         messageParser={MessageParser}

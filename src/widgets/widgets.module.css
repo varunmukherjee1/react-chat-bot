@@ -1,0 +1,27 @@
+.buttonDiv button {
+    color: #2898EC;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid #2389ec;
+    padding: 5px 11px;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.buttonDiv button:hover {
+    background-color: #2389ec;
+    color: white;
+}
+
+
+.selectDiv select {
+    color: #2898EC;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid #2389ec;
+    padding: 5px 11px;
+    border-radius: 22px;
+    cursor: pointer;
+}

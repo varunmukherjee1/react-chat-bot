@@ -5,6 +5,8 @@ import { createClientMessage } from 'react-chatbot-kit'
 
 import { userActions } from '../store/store'
 
+import classes from "./widgets.module.css"
+
 const Dropdown = (props) => {
 
     const dispatch = useDispatch();
@@ -31,7 +33,7 @@ const Dropdown = (props) => {
     }
 
     return (
-        <div>
+        <div className = {classes.selectDiv}>
             <select ref = {ageRef} onChange = {changeHandler}>
                 <option value="">-- Select Age --</option>
                 {opts}
