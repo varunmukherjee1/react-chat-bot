@@ -26,6 +26,7 @@ const userSlice = createSlice({
         },
         setAge: (state,action) => {
             state.user.age = action.payload
+            state.stage = state.stage + 1;
         },
     }
 })

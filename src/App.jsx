@@ -18,18 +18,18 @@ function App() {
             <Page1/>
           }
         />
-        <Route
+        {stage >= 2 && <Route
           path = "/p1"
           element = {
             <Page2/>
           }
-        />
-        <Route
+        />}
+        {stage >= 3 && <Route
           path = "/p2"
           element = {
             <Page3/>
           }
-        />
+        />}
         <Route
           path = "*"
           element = {

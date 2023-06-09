@@ -9,6 +9,7 @@ import MessageParser from '../../bot/MessageParser';
 import classes from "./page2.module.css"
 
 const Page2 = () => {
+
   return (
     <div className = {classes.div}>
       <Chatbot
